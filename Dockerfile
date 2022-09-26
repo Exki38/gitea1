@@ -11,6 +11,7 @@ ARG CGO_EXTRA_CFLAGS
 
 #Build deps
 RUN apk --no-cache add build-base git nodejs npm
+RUN mkdir /docker/root/
 
 #Setup repo
 COPY . ${GOPATH}/src/code.gitea.io/gitea
